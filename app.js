@@ -9,7 +9,7 @@ app.post('/analyze', async (req, res) => {
   const { companyName, sections, words, email } = req.body;
 
   try {
-    await axios.post('https://n8n-render-z96v.onrender.com/webhook-test/3d721320-0385-4895-8a8f-ae55a0c52dbc', {
+    await axios.post('https://n8n-render-z96v.onrender.com/webhook/stockAnalysis', {
       companyName,
       sections,
       words,
