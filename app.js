@@ -6,6 +6,13 @@ app.use(express.json()); // Middleware to parse JSON bodies
 
 app.post('/analyze', async (req, res) => {
   const { stock, email } = req.body;
+    // Predefine additional fields
+    const additionalData = {
+      title: "Your Report Title", // Replace with your actual report title
+      subtitle: "Your Report Subtitle", // Replace with your actual report subtitle
+      words: 1000, // Example number of words
+      sections: 5 // Example number of sections
+    };
   try {
     await axios.post('https://n8n-render-z96v.onrender.com/webhook/stockAnalysis', {
       stock,
