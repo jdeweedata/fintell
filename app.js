@@ -16,7 +16,8 @@ app.post('/analyze', async (req, res) => {
   try {
     await axios.post('https://n8n-render-z96v.onrender.com/webhook/stockAnalysis', {
       stock,
-      email
+      email,
+      ...additionalData // Spread operator to include the predefined data
     });
     res.sendStatus(200); // OK status
   } catch (error) {
