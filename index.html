@@ -50,7 +50,7 @@
             event.preventDefault();
             const stock = document.getElementById('stockInput').value;
             const email = document.getElementById('emailInput').value;
-            const webhookUrl = 'https://n8n-render-z96v.onrender.com/webhook-test/3d721320-0385-4895-8a8f-ae55a0c52dbc';
+            const webhookUrl = 'https://n8n-render-z96v.onrender.com/webhook/stockAnalysis';
 
             fetch(webhookUrl, {
                 method: 'POST',
